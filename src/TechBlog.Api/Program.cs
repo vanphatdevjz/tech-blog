@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using TechBlog.Api;
 using TechBlog.Core.Domain.Identity;
 using TechBlog.Data;
 
@@ -57,4 +58,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+//seeding data
+app.MigrateDatabase();
 app.Run();
